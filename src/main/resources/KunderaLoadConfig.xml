@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<clientProperties>
+
+	<datastores>
+
+		<dataStore>
+
+			<name>cassandra</name>
+
+			<connection>
+
+				<servers>
+
+					<server>
+
+						<host>192.168.56.101</host>
+
+						<port>9160</port>
+
+						<properties>
+
+							<property name="testonborrow" value="true"></property>
+
+							<property name="testwhileidle" value="true"></property>
+
+							<property name="testonconnect" value="true"></property>
+
+							<property name="testonreturn" value="true"></property>
+
+							<property name="socket.timeout" value="10000"></property>
+
+							<property name="failover.policy" value="on.fail.try.one.next.available"></property>
+
+							<property name="retry" value="true"></property>
+
+							<property name="kundera.pool.size.max.active" value="31"></property>
+
+						</properties>
+
+					</server>	
+
+					<!-- <server>
+
+						<host>192.168.56.102</host>
+
+						<port>9160</port>
+
+						<properties>
+
+							<property name="testonborrow" value="true"></property>
+
+							<property name="testwhileidle" value="true"></property>
+
+							<property name="testonconnect" value="true"></property>
+
+							<property name="testonreturn" value="true"></property>
+
+							<property name="socket.timeout" value="10000"></property>
+
+							<property name="failover.policy" value="on.fail.try.one.next.available"></property>
+
+							<property name="retry" value="true"></property>
+
+							<property name="kundera.pool.size.max.active" value="31"></property>
+
+						</properties>
+
+					</server> -->	
+					
+				</servers>				
+
+			</connection>
+
+		</dataStore>
+
+	</datastores>
+
+</clientProperties>

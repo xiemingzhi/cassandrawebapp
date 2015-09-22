@@ -1,0 +1,9 @@
+@CHARSET "UTF8";
+
+input.button_rewind {
+	background-image: url(/images/button-rewind.png);
+background-repeat: no-repeat;
+background-position: left;
+padding-right: 10px;
+
+}
