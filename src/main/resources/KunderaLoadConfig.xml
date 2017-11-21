@@ -14,7 +14,7 @@
 
 					<server>
 
-						<host>192.168.56.101</host>
+						<host>localhost</host>
 
 						<port>9160</port>
 
