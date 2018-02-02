@@ -14,9 +14,9 @@
 
 					<server>
 
-						<host>localhost</host>
-
-						<port>9160</port>
+						<!-- <host>192.168.99.100</host> -->
+						<!-- <host>cassandra2</host> -->
+						<!-- <port>9160</port> -->
 
 						<properties>
 

@@ -6,6 +6,8 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -22,9 +24,19 @@ import com.impetus.client.cassandra.common.CassandraConstants;
 @ApplicationScoped
 public class MemberRepository {
 
-    @Inject
+    //@PersistenceContext(unitName = "cassandra_pu", type = PersistenceContextType.EXTENDED)
+    //@PersistenceContext
+	@Inject
     private EntityManager em;
 
+    public MemberRepository() {
+    	/*Map<String, String> propertyMap = new HashMap<String, String>();
+        propertyMap.put(CassandraConstants.CQL_VERSION, CassandraConstants.CQL_VERSION_3_0);
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("cassandra_pu", propertyMap);
+
+        em = emf.createEntityManager();*/
+    }
+    
     public Member findById(Long id) {
         return em.find(Member.class, id);
     }
@@ -62,4 +74,13 @@ public class MemberRepository {
     	em.remove(member);
     	
     }
+
+	public EntityManager getEm() {
+		return em;
+	}
+
+	public void setEm(EntityManager em) {
+		this.em = em;
+	}
+    
 }

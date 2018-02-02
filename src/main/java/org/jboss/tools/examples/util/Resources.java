@@ -34,7 +34,7 @@ public class Resources {
     // use @SuppressWarnings to tell IDE to ignore warnings about field not being referenced directly
     @SuppressWarnings("unused")
     @Produces
-    @PersistenceContext
+    //@PersistenceContext
     private EntityManager produceEntityManager() {
         Map<String, String> propertyMap = new HashMap<String, String>();
         propertyMap.put(CassandraConstants.CQL_VERSION, CassandraConstants.CQL_VERSION_3_0);

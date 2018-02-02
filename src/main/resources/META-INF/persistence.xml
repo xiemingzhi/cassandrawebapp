@@ -7,13 +7,17 @@
         http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">        	
 	
 	<persistence-unit name="cassandra_pu">
-        <provider>com.impetus.kundera.KunderaPersistence</provider>     
+        <provider>com.impetus.kundera.KunderaPersistence</provider>
+        <class>org.jboss.tools.examples.model.Member</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>     
         <properties>            
-            <property name="kundera.nodes" value="localhost"/>
+            <!-- <property name="kundera.nodes" value="192.168.99.100"/> -->
+            <property name="kundera.nodes" value="cassandra2"/>
             <property name="kundera.port" value="9160"/>
             <property name="kundera.keyspace" value="kunderaexamples"/>
             <property name="kundera.dialect" value="cassandra"/>
-            <property name="kundera.ddl.auto.prepare" value="create" />
+            <property name="kundera.ddl.auto.prepare" value="update" />
+            <property name="kundera.client" value="thrift" />
             <property name="kundera.client.lookup.class"
 				value="com.impetus.client.cassandra.thrift.ThriftClientFactory" />
             <!-- <property name="kundera.cache.provider.class" value="com.impetus.kundera.cache.ehcache.EhCacheProvider"/>

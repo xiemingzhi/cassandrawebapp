@@ -26,6 +26,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Member implements Serializable {
 
     @Id
+    @Column(name = "id")
     @GeneratedValue
     private Long id;
 

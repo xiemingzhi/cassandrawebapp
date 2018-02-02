@@ -15,8 +15,8 @@ import com.impetus.client.cassandra.common.CassandraConstants;
 public class KunderaTest {
 
 	public static void main(String[] args) {
-		//testReadOld();
-		testInsertOld();
+		testReadOld();
+		//testInsertOld();
 	}
 
 	public static void testReadOld() {

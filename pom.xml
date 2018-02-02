@@ -47,7 +47,7 @@
         <maven.compiler.source>1.6</maven.compiler.source>
         
         <kundera.core.version>2.11.1</kundera.core.version>
-        <kundera.client.version>2.12</kundera.client.version>
+        <kundera.client.version>3.12</kundera.client.version>
         <kundera.version>2.12</kundera.version>
         
     </properties>
@@ -257,7 +257,7 @@
         <dependency>
             <groupId>com.impetus.kundera.client</groupId>
             <artifactId>kundera-cassandra</artifactId>
-            <version>${kundera.version}</version>
+            <version>${kundera.client.version}</version>
         </dependency>
         		
     </dependencies>
