@@ -50,6 +50,8 @@
         <kundera.client.version>2.12</kundera.client.version>
         <kundera.version>2.12</kundera.version>
         
+		<cassandra.version>2.1.4</cassandra.version>
+
     </properties>
 
 
@@ -259,7 +261,13 @@
             <artifactId>kundera-cassandra</artifactId>
             <version>${kundera.version}</version>
         </dependency>
-        		
+
+		<dependency>
+			<groupId>com.datastax.cassandra</groupId>
+			<artifactId>cassandra-driver-core</artifactId>
+			<version>${cassandra.version}</version>
+		</dependency>        		
+
     </dependencies>
 
     <repositories>    
